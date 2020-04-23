@@ -1,0 +1,182 @@
+/* Fonts */
+
+@font-face {
+    font-family: New Rocker;
+    src: url('./fonts/NewRocker-Regular.ttf');
+}
+
+@font-face {
+    font-family: Nosifer;
+    src: url('./fonts/Nosifer-Regular.ttf');
+}
+
+
+/* Global style */
+  
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Nosifer", "New Rocker", cursive;
+    background: #333;
+    color: #fff;
+    line-height: 1.6;
+    height: 100%;
+    cursor: url(./fonts/sym731.cur), auto !important;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    width: 100%;
+    height: 60px;
+    background: rgba(0,0,0,0.7);
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    width: 100%;
+    justify-content: center;
+}
+
+.navbar ul li {
+    margin: 0 1rem;
+    padding: 1rem;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #f4f4f4;
+}
+
+.navbar ul li a:hover {
+    color: #313f2b;
+    text-shadow: 2px 2px rgb(138, 3, 3) ;
+
+}
+
+.navbar ul li img {
+    width: 2.7rem;
+    height: 2.7rem;
+    margin: 0;
+    padding-bottom: 0.5rem;
+    opacity: 0.666;
+    vertical-align: middle;
+}
+
+/* About */
+
+section#history {
+    background: url('./img/about.jpg') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+section#history h1 {
+    font-size: 1.6rem;
+    text-shadow: 5px 5px #8a0303;
+    padding: 5rem 0 3rem;
+
+}
+
+section#history p {
+    font-size: 1rem;
+    text-shadow: 0.1rem 0.1rem #8a0303;
+    font-family: "arial", cursive;
+    background: rgba(0,0,0,0.666);
+    text-align: justify;
+    padding: 1rem 1rem;
+    width: 95%;
+}
+
+/* Media queries */
+@media(max-width: 600px) {
+    html, 
+    body {
+        height: 100%;
+        width: 100%;
+    }
+    
+    body {
+        display: flex;
+        flex-direction: column;
+        line-height: 1.3;
+    }
+    
+    .container {
+        flex: 1 0 auto;
+        margin: 0 auto;
+        padding: 10px;
+        overflow: auto; 
+    }
+    
+    .navbar {
+        display: flex;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 10%;
+        width: 100%;
+        background: rgba(0,0,0,0.9);
+    }
+    
+    .navbar ul {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        vertical-align: center;
+        
+    }
+    
+    .navbar ul li {
+        padding: 0.23rem;
+        margin: 0.2rem;
+    }
+    
+    .navbar ul li {
+        font-size: 0.666rem;
+    }
+    
+    .navbar ul li img {
+        display: none;
+    }
+
+    section#history {
+        height: fit-content;
+        background: #313f2b;
+    }
+    
+    section#history h1 {
+        font-size: 1.4rem;
+        text-shadow: 3px 3px #8a0303;
+        padding: 5rem 0 3rem;
+    }
+        
+    section#history p {
+        font-size: 1rem;
+        text-shadow: 0.05rem 0.05rem #8a0303;
+        font-family: "arial", cursive;
+        background: rgba(0,0,0,0.666);
+        text-align: justify;
+        padding: 0.8rem 0.8rem;
+        width: 100%;
+        line-height: 1.666;
+    }
+}

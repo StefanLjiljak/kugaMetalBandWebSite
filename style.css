@@ -1,0 +1,453 @@
+@font-face {
+    font-family: New Rocker;
+    src: url('./fonts/NewRocker-Regular.ttf');
+}
+
+@font-face {
+    font-family: squealer;
+    src: url('./fonts/squealer.ttf');
+}
+
+@font-face {
+    font-family: Nosifer;
+    src: url('./fonts/Nosifer-Regular.ttf');
+}
+ 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Nosifer", "New Rocker", cursive;
+    background: #333;
+    color: #fff;
+    line-height: 1.6;
+    height: 100vh;
+    overflow: hidden;
+    cursor: url(./fonts/sym731.cur), auto !important;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    /* CSS Smooth Scroll */
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    width: 100%;
+    height: 60px;
+    background: rgba(0,0,0,0.7);
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    width: 100%;
+    justify-content: center;
+}
+
+.navbar ul li {
+    margin: 0 1rem;
+    padding: 1rem;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #f4f4f4;
+}
+
+.navbar ul li a:hover {
+    color: #313f2b;
+    text-shadow: 2px 2px rgb(138, 3, 3) ;
+
+}
+
+.navbar ul li img {
+    width: 2.7rem;
+    height: 2.7rem;
+    margin: 0;
+    padding-bottom: 0.5rem;
+    opacity: 0.666;
+    vertical-align: middle;
+}
+
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+    scroll-snap-align: center;
+}
+
+section h1 {
+    font-size: 3rem;
+    text-shadow: 6px 6px #8a0303;
+
+}
+
+section p {
+    font-size: 1rem;
+    line-height: 1.9;
+    text-shadow: 1px 1px #8a0303;
+    padding: 1rem 1rem;
+    margin: 1rem;
+    background: rgba(0,0,0,0.4);
+    width: 90%;
+}
+
+
+/* Section Images */
+
+/* Home */
+
+section#home {
+    background: url('./img/home.jpg') no-repeat center center/cover;
+}
+
+section#home h1 {
+    font-size: 6.66rem;
+    text-shadow: 9px 9px #8a0303;
+}
+
+section#home p {
+    font-size: 1.3rem;
+    text-shadow: 2px 2px #8a0303;
+    background: none;
+}
+
+/* About */
+
+section#history {
+    background: url('./img/history.jpg') no-repeat center top/cover;
+}
+
+section#history h1 {
+    padding-bottom: 2rem;
+}
+
+section#history p {
+    font-size: 1rem;
+    text-shadow: 0.5px 0.5px black;
+    font-family: "New Rocker", cursive;
+}
+
+#btn {
+    font-family: "New Rocker", cursive;
+    width: 6rem;
+    background: #8a0303;
+    color: white;
+    border: none;
+    border-radius: 15%;
+    outline: none;
+    cursor: pointer;
+    padding: 0.9rem;
+    margin: 1rem;
+}
+    
+#btn:hover {
+    opacity: 0.9;
+    background: rgba(0,0,0,0.99);
+}
+
+/* Discography */
+
+section#discography {
+    background: url('./img/discography.jpg') no-repeat center top/cover;
+}
+
+section#discography h1 {
+    padding-top: 2.6rem;
+}
+
+section#discography ul {
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    justify-content: center;
+    width: 50%;
+    border: none;
+}
+
+section#discography ul li {
+    margin: 0 1rem;
+    padding: 0.8rem;
+    font-family: "New Rocker", cursive;
+    background: rgba(0,0,0,0.5);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+    justify-content: center;
+}
+
+section#discography ul li:hover {
+    cursor: pointer;
+    transform: scale(1.1, 1.3);
+    background: rgba(0,0,0,0.8);
+    z-index: 5;
+    text-shadow: 2px 2px #8a0303;
+}
+
+section#discography ul li img {
+    width: 3rem;
+    height: 3rem;
+    vertical-align: middle;
+}
+
+/* Contact */
+
+section#contact {
+    background: url('./img/kuga-djavoli-ja-i-ti.jpg') no-repeat center top/cover;
+}
+
+section#contact ul {
+    background: rgba(0,0,0,0.5);
+    width: 25%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+
+section#contact ul li a {
+    text-decoration: none;
+    color: white;
+    font-family: 'squealer', "New Rocker", cursive;
+    font-size: 1.4rem;
+    text-shadow: 1px 1px #8a0303;
+}
+
+section#contact ul li {
+    margin: 0.5rem 0;
+}
+
+
+section#contact a i.fa-facebook-f {
+   color: #3b5998;
+   text-shadow: none;
+   margin: 0 2rem 0 0.5rem;
+}
+
+section#contact a i.fa-envelope {
+    margin: 0 2rem 0 0.5rem;
+    text-shadow: 1px 1px #8a0303;
+}
+
+section#contact a i.fa-globe {
+    margin: 0 2rem 0 0.5rem;
+    text-shadow: 1px 1px #8a0303;
+}
+
+section#contact a i.fa-youtube {
+    margin: 0 2rem 0 0.5rem;
+    color:#FF0000;
+}
+
+/* Media queries */
+@media(max-width: 600px) {
+html, 
+body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.3;
+}
+
+.container {
+    flex: 1 0 auto;
+    margin: 0 auto;
+    padding: 10px;
+    overflow: none; 
+}
+
+.navbar {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 10%;
+    width: 100%;
+}
+
+.navbar ul {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    vertical-align: center;
+    
+}
+
+.navbar ul li {
+    padding: 0.23rem;
+    margin: 0.2rem;
+}
+
+.navbar ul li {
+    font-size: 0.666rem;
+}
+
+.navbar ul li img {
+    display: none;
+}
+
+section h1{
+    font-size: 1.8rem;
+    text-shadow: 3px 3px #8a0303;
+}
+
+section p {
+    font-size: 1rem;
+    text-shadow: 1px 1px #8a0303;
+}
+
+/* // Home */
+section#home h1 {
+    font-size: 5rem;
+    text-shadow: 6px 6px #8a0303;
+}
+
+section#home p {
+    font-size: 1rem;
+    text-shadow: 1.6px 1.6px #8a0303;
+    background: none;
+}
+
+/* About */
+
+section#history {
+    background: url('./img/historyMob.jpg') no-repeat center center/cover;
+}
+
+section#history h1 {
+    padding-bottom: 2rem;
+}
+
+section#history p {
+    font-size: 1rem;
+    text-shadow: 0.5px 0.5px black;
+    font-family: "New Rocker", cursive;
+    background: rgba(0,0,0,0.6);
+}
+  
+/* Discography */
+
+section#discography {
+    background: url('./img/discographyMob.jpg') no-repeat center top/cover;
+}
+
+section#discography h1 {
+    padding: 2rem 0;
+}
+
+section#discography ul {
+    padding: 1rem;
+    display: grid;
+    list-style: none;
+    justify-content: center;
+    text-align: center;
+    justify-content: center;
+    vertical-align: center;
+    width: 90%;
+    border: none;
+    background: rgba(0,0,0,0.6);
+}
+
+section#discography ul li {
+    margin: 0.3rem;
+    padding: 0.5rem;
+    font-family: "New Rocker", cursive;
+    grid-template-columns: 1fr 2fr;
+    text-align: center;
+    justify-content: center;
+    vertical-align: center;
+    background: none;
+}
+
+
+section#discography ul li img {
+    width: 3.3rem;
+    height: 3rem;
+    vertical-align: middle;
+}
+
+/* Contact */
+section#contact {
+    background: url('./img/contactMob2.jpg') no-repeat center top/cover;
+}
+
+section#contact h1 {
+    padding-bottom: 4rem;
+}
+
+
+section#contact ul {
+    background: rgba(0,0,0,0.5);
+    width: 90%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+
+section#contact ul li a {
+    text-decoration: none;
+    color: white;
+    font-family: 'squealer', "New Rocker", cursive;
+    font-size: 1.4rem;
+    text-shadow: 1px 1px #8a0303;
+}
+
+section#contact ul li {
+    margin: 0.5rem 0;
+    line-height: 1.5;
+}
+
+
+section#contact a i.fa-facebook-f {
+   color: #3b5998;
+   text-shadow: none;
+   margin: 0 2rem 0 0.5rem;
+}
+
+section#contact a i.fa-envelope {
+    margin: 0 2rem 0 0.5rem;
+    text-shadow: 1px 1px #8a0303;
+}
+
+section#contact a i.fa-globe {
+    margin: 0 2rem 0 0.5rem;
+    text-shadow: 1px 1px #8a0303;
+}
+
+section#contact a i.fa-youtube {
+    margin: 0 2rem 0 0.5rem;
+    color:#FF0000;
+}
+
+}
